@@ -4,8 +4,9 @@ const navbar = () => {
   return (
    <header className='bg-white'>
     <nav  className=' max-w-[1400px] mx-auto px-10 h-[14vh] flex justify-between items-center '>
-      <a href="#">
-        Gr<span>o</span>cify
+      {/* nav logo */}
+      <a href="#" className=' text-3xl font-bold'>
+        Gr<span className='text-orange-500 uppercase'>o</span>cify
       </a>
       {/* menu */}
       <ul  className='flex'>
