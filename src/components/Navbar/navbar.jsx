@@ -1,6 +1,7 @@
 import React from 'react'
 import { GoHeartFill } from "react-icons/go";
 import { HiMiniShoppingBag } from "react-icons/hi2";
+import { IoIosSearch } from "react-icons/io";
 
 const navbar = () => {
   return (
@@ -25,8 +26,14 @@ const navbar = () => {
             <a href="#" className='font-bold tracking-wider text-zinc-800 hover:text-orange-500'>Contact Us</a>
           </li>
         </ul>
-        {/* search bar */}
+        {/* nav actions */}
         <div className=' flex items-center gap-x-5'>
+          {/* search bar */}
+          <div className='flex p-0.5 items-center border-2 rounded-full border-orange-300'>
+            <input type="text" name='text' id='text' placeholder='Search...' autoComplete='off' className='outline-none border-none flex-1 h-[5vh] px-3 focus:outline-none' />
+            <button className=' text-2xl w-10 h-10 flex justify-center items-center bg-gradient-to-b from-orange-400 to-orange-600 rounded-full text-white '><IoIosSearch /></button>
+          </div>
+
           <a href="#" className='text-zinc-800 hover:text-orange-500 text-2xl'>
             <GoHeartFill />
           </a>
