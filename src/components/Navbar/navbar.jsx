@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 
 const navbar = () => {
   return (
-    <header className='bg-white'>
+    <header className='bg-white fixed top-0 right-0 left-0'>
       <nav className=' max-w-[1300px] mx-auto px-10 h-[14vh] flex justify-between items-center '>
         {/* nav logo */}
         <a href="#" className=' text-3xl font-bold'>
@@ -14,16 +14,16 @@ const navbar = () => {
         {/* menu */}
         <ul className='flex gap-5'>
           <li>
-            <a href="#" className='font-semibold tracking-wider text-orange-500 hover:text-orange-500'>Home</a>
+            <a href="#" className='font-semibold tracking-wider text-orange-500 hover:text-orange-500 text-lg'>Home</a>
           </li>
           <li>
-            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>About Us</a>
+            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>About Us</a>
           </li>
           <li>
-            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>process</a>
+            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>process</a>
           </li>
           <li>
-            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500'>Contact Us</a>
+            <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>Contact Us</a>
           </li>
         </ul>
         {/* nav actions */}
