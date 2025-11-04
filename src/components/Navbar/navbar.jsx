@@ -2,8 +2,8 @@ import React from 'react'
 
 const navbar = () => {
   return (
-   <header>
-    <nav  className='flex'>
+   <header className='bg-white'>
+    <nav  className=' max-w-[1400px] mx-auto px-10 h-[14vh] flex justify-between items-center '>
       <a href="#">
         Gr<span>o</span>cify
       </a>
