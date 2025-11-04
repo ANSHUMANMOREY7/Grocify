@@ -9,18 +9,18 @@ const navbar = () => {
         Gr<span className='text-orange-500 uppercase'>o</span>cify
       </a>
       {/* menu */}
-      <ul  className='flex'>
+      <ul  className='flex gap-5'>
         <li>
-          <a href="#">Home</a>
+          <a href="#"className='font-bold tracking-wider text-zinc-800 hover:text-orange-500'>Home</a>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="#"className='font-bold tracking-wider text-zinc-800 hover:text-orange-500'>About Us</a>
         </li>
         <li>
-          <a href="#">process</a>
+          <a href="#"className='font-bold tracking-wider text-zinc-800 hover:text-orange-500'>process</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#"className='font-bold tracking-wider text-zinc-800 hover:text-orange-500'>Contact Us</a>
         </li>
       </ul>
     </nav>
