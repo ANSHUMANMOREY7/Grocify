@@ -2,7 +2,7 @@ import React from 'react'
 import { GoHeartFill } from "react-icons/go";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
-import { TbMenu2 } from "react-icons/tb";
+import { TbMenu2, TbMenu3 } from "react-icons/tb";
 import { useState } from 'react';
 
 
@@ -50,7 +50,7 @@ const navbar = () => {
             <HiMiniShoppingBag />
           </a>
           {/* hamburger */}
-          <a href="#" className='text-zinc-800 text-3xl md:hidden ' onClick={toggleMenu}> <TbMenu2 /></a>
+          <a href="#" className='text-zinc-800 text-3xl md:hidden cursor-pointer transition-all duration-700' onClick={toggleMenu}> { ShowMenu? <TbMenu3 />:<TbMenu2 />}</a>
           {/* mobile menu */}
           <ul className={`flex flex-col items-center justify-center gap-y-6 md:hidden fixed -left-full top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500/15 backdrop-blur-xl p-8 w-66 h-[60vh]  z-50 rounded-xl transition-all duration-500 ${ShowMenu ? 'left-1/2' : '-left-full'}`}>
             <li>
