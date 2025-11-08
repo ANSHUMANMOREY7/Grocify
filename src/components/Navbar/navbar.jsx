@@ -3,9 +3,15 @@ import { GoHeartFill } from "react-icons/go";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { TbMenu2 } from "react-icons/tb";
+import { useState } from 'react';
 
 
 const navbar = () => {
+  const [ ShowMenu,setShowMenu] =useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!ShowMenu);
+  };
+
   return (
     <header className='bg-white fixed top-0 right-0 left-0'>
       <nav className=' max-w-[1300px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center '>
@@ -44,24 +50,24 @@ const navbar = () => {
             <HiMiniShoppingBag />
           </a>
           {/* hamburger */}
-          <a href="#" className='text-zinc-800 text-3xl md:hidden '> <TbMenu2 /></a>
+          <a href="#" className='text-zinc-800 text-3xl md:hidden ' onClick={toggleMenu}> <TbMenu2 /></a>
           {/* mobile menu */}
-          <ul className='flex flex-col items-center justify-center gap-y-6 md:hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500/50 backdrop-blur-xl p-8 w-66 h-[60vh]  z-50'>
+          <ul className={`flex flex-col items-center justify-center gap-y-6 md:hidden fixed -left-full top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500/15 backdrop-blur-xl p-8 w-66 h-[60vh]  z-50 rounded-xl transition-all duration-500 ${ShowMenu ? 'left-1/2' : '-left-full'}`}>
             <li>
-              <a href="#" className='font-semibold tracking-wider text-white hover:text-orange-200 text-lg'>Home</a>
+              <a href="#" className='font-semibold tracking-wider text-orange-500 hover:text-orange-500 text-lg'>Home</a>
             </li>
             <li>
-              <a href="#" className='font-semibold tracking-wider text-white hover:text-orange-200 text-lg'>About Us</a>
+              <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>About Us</a>
             </li>
             <li>
-              <a href="#" className='font-semibold tracking-wider text-white hover:text-orange-200 text-lg'>process</a>
+              <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>process</a>
             </li>
             <li>
-              <a href="#" className='font-semibold tracking-wider text-white hover:text-orange-200 text-lg'>Contact Us</a>
+              <a href="#" className='font-semibold tracking-wider text-zinc-800 hover:text-orange-500 text-lg'>Contact Us</a>
             </li>
-            <li className='flex p-1 items-center border-2 rounded-full border-orange-300 m-1 bg-white/10'>
-              <input type="text" name='text' id='text' placeholder='Search...' autoComplete='off' className='outline-none border-none flex-1 h-[4vh] px-2 focus:outline-none bg-transparent text-white placeholder-white/80 w-39' />
-              <button className=' text-2xl w-10 h-10 flex justify-center items-center bg-linear-to-b from-orange-400 to-orange-600 rounded-full text-white '><IoIosSearch /></button>
+            <li className='flex p-1 items-center border-2 rounded-full border-orange-500 m-1 bg-white/10 '>
+              <input type="text" name='text' id='text' placeholder='Search...' autoComplete='off' className='outline-none border-none flex-1 h-[4vh] px-2 focus:outline-none bg-transparent text-zinc-800 placeholder-orange-500/80 w-39' />
+              <button className=' text-2xl w-10 h-10 flex justify-center items-center bg-linear-to-b from-orange-400 to-orange-600 rounded-full  '><IoIosSearch /></button>
             </li>
           </ul>
 
