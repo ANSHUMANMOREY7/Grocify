@@ -6,20 +6,21 @@ import DairyCat from '../../assets/dairy-and-eggs.png'
 import Button from '../Button/Button'
 
 const Category = () => {
-  
-    const RenderCards = category.map(cards => {
+
+  const RenderCards = category.map(cards => {
     return (
-      <div>
-           <div>
-            <img src={cards.image} />
-           </div>
-           <div>
-            <h2>{cards.title}</h2>
-           </div>
-           <div>
-            <p>{cards.description}</p>
-           </div>
-           <Button content="See All"/>
+      // card 
+      <div className='flex-1 basis-[300px]'>
+        {/* card image */}
+        <div className='w-full min-h-[32vh] relative -mb-12 '>
+          <img src={cards.image} className='absolute bottom-0' />
+        </div>
+        {/* card content */}
+        <div className='bg-zinc-200 pt-17 p-8 rounded-xl'>
+          <h3 className='text-3xl font-bold text-zinc-800'>{cards.title}</h3>
+          <p className='text-zinc-600 mt-3 mb-9'>{cards.description}</p>
+          <Button content="See All" />
+        </div>
       </div>
     )
   });
@@ -27,10 +28,10 @@ const Category = () => {
   return (
     <section>
       <div className='py-20 max-w-[1300px] mx-auto px-10'>
-        <Heading highlight='Shop' content='By Category'/>
+        <Heading highlight='Shop' content='By Category' />
 
         {/* category cards */}
-        <div>
+        <div className='md:flex md:mt-14 mt-2  gap-10 '>
           {RenderCards}
         </div>
       </div>

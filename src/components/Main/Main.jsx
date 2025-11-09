@@ -17,7 +17,7 @@ const Main = () => {
                     <Button content="Shop Now"/>
                 </div>
                 {/* main image */}
-                <div className='flex-1'>
+                <div className='flex-1 mt-4'>
                     <img src={grocery} alt="main image" />
                 </div>
 
