@@ -5,7 +5,7 @@ const Category = () => {
   return (
     <section>
       <div className='py-20 '>
-        <Heading />
+        <Heading highlight='Shop' content='By Category'/>
       </div>
     </section>
   )
