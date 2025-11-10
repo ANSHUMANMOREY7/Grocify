@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import Heading from '../Heading/Heading'
 import ProductList from "../ProductList/ProductList"
+import Cards from '../Cards/Cards'
 
 const Products = () => {
 
     const categories = ["All", "Fruits", "Vegetables ", "Dairy", "Seafood"];
     const [ activeTab , setActiveTab] = useState("All");
+
+    const renderCards = ProductList.map(product =>{
+        return(
+           <Cards />
+        )
+    })
     return (
         <section>
             <div className='max-w-[1300px] mx-auto px-10 py-20'>
@@ -24,6 +31,9 @@ const Products = () => {
                         )
                     })}
                 </div>
+                
+                {/* product cards */}
+                <div>{renderCards}</div>
             </div>
         </section>
     )
