@@ -6,10 +6,12 @@ import Button from '../Button/Button'
 
 const Products = () => {
 
-    const categories = ["All", "Fruits", "Vegetables ", "Dairy", "Seafood"];
+    const categories = ["All", "Fruits", "Vegetables", "Dairy", "SeaFood"];
     const [ activeTab , setActiveTab] = useState("All");
 
-    const renderCards = ProductList.slice(0, 8).map(product =>{
+    let FilteredItems = activeTab === 'All' ? ProductList : ProductList.filter(item => item.category === activeTab)
+
+    const renderCards = FilteredItems.slice(0, 8).map(product =>{
         return(
            <Cards image={product.image} name={product.name} price={product.price} />
         )
