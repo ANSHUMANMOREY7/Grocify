@@ -8,7 +8,7 @@ import { FiTruck } from "react-icons/fi";
 const Process = () => {
     const RenderSteps = steps.map(items => {
         return (
-            <div className='bg-zinc-300/50 rounded-lg p-5'>
+            <div className='bg-zinc-300/50 rounded-lg p-5 flex-wrap max-w-[1300px] mx-auto py-10 '>
                  <span className=' flex text-orange-500 w-18 text-7xl h-18 justify-center align-center rounded-full'>{items.number}</span>
                  <div className='flex justify-center'>
                     <span className='text-5xl  text-zinc-800 font-bold '>{items.icon}</span>
