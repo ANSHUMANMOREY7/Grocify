@@ -26,7 +26,7 @@ const Process = () => {
             <div className=''>
                 <Heading highlight="Our" content="Process" />
             </div>
-            <div className='flex gap-10 mt-20 items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9 mt-20 items-center'>
                {RenderSteps}
             </div>
         </div>
