@@ -13,7 +13,7 @@ const navbar = () => {
   };
 
   return (
-    <header className='bg-white fixed top-0 right-0 left-0'>
+    <header className='bg-white fixed top-0 right-0 left-0 z-50 shadow-md'>
       <nav className=' max-w-[1300px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center '>
         {/* nav logo */}
         <a href="#" className=' text-3xl font-bold'>
@@ -52,7 +52,7 @@ const navbar = () => {
           {/* hamburger */}
           <a href="#" className='text-zinc-800 text-3xl md:hidden cursor-pointer transition-all duration-700' onClick={toggleMenu}> { ShowMenu? <TbMenu3 />:<TbMenu2 />}</a>
           {/* mobile menu */}
-          <ul className={`flex flex-col items-center justify-center gap-y-6 md:hidden fixed -left-full top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500/15 backdrop-blur-xl p-8 w-66 h-[60vh]  z-50 rounded-xl transition-all duration-500 ${ShowMenu ? 'left-1/2' : '-left-full'}`}>
+          <ul className={`flex flex-col items-center justify-center gap-y-6 md:hidden fixed -left-full top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-500/15 backdrop-blur-xl p-8 w-66 h-[60vh]  z-50 rounded-xl transition-all duration-500 ${ShowMenu ? 'left-1/2' : '-left-full'} shadow-md` }>
             <li>
               <a href="#" className='font-semibold tracking-wider text-orange-500 hover:text-orange-500 text-lg'>Home</a>
             </li>
