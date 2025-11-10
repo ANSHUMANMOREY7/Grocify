@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import Heading from '../Heading/Heading'
 import ProductList from "../ProductList/ProductList"
 import Cards from '../Cards/Cards'
+import Button from '../Button/Button'
 
 const Products = () => {
 
     const categories = ["All", "Fruits", "Vegetables ", "Dairy", "Seafood"];
     const [ activeTab , setActiveTab] = useState("All");
 
-    const renderCards = ProductList.map(product =>{
+    const renderCards = ProductList.slice(0, 8).map(product =>{
         return(
            <Cards image={product.image} name={product.name} price={product.price} />
         )
@@ -25,7 +26,7 @@ const Products = () => {
                         return (
                            <button key={category}
                            className={`text-lg cursor-pointer px-5 py-2 rounded-lg
-                           ${activeTab === category ? 'bg-gradient-to-b from-orange-400 to-orange-500 text-white' : 'bg-zinc-300'}`} onClick={()=>setActiveTab(category)}>
+                           ${activeTab === category ? 'bg-gradient-to-b from-orange-400 to-orange-500 text-white' : 'bg-zinc-300/50'}`} onClick={()=>setActiveTab(category)}>
                             {category}
                            </button>
                         )
@@ -33,7 +34,11 @@ const Products = () => {
                 </div>
 
                 {/* product cards */}
-                <div>{renderCards}</div>
+                <div className='grid grid-cols-4 gap-9 mt-20'>{renderCards}
+                </div>
+                <div className='mx-auto w-fit mt-15'>
+                    <Button content="View All"/>
+                </div>
             </div>
         </section>
     )
