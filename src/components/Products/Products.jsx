@@ -29,3 +29,6 @@ const Products = () => {
 }
 
 export default Products
+
+
+const product = [{id:1, title:"Apple", price:"Fruits", imgSrc:"/products/apple.png"},];
