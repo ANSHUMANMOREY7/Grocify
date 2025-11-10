@@ -6,13 +6,13 @@ const Values = () => {
 
 const leftValues = value.slice(0, 2).map((item)=>{
     return(
-        <div className=' flex flex-row-reverse items-center gap-7'>
+        <div className=' flex md:flex-row-reverse items-center gap-7'>
            <div>
             <span className=' flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-15 h-15 rounded-full '>{item.icon}</span>
            </div>
-           <div className='text-right'>  
+           <div className='md:text-right'>  
             <h3 className=' text-3xl text-zinc-800 font-bold'>{item.title}</h3>
-            <p className='text-zinc-600 '>{item.para}</p>
+            <p className='text-zinc-600 mt-2'>{item.para}</p>
            </div>
         </div>
     )
@@ -24,8 +24,8 @@ const rightValues = value.slice(2, 4).map((item)=>{
             <span className=' flex justify-center items-center text-3xl text-white bg-gradient-to-b from-orange-400 to-orange-500 w-15 h-15 rounded-full '>{item.icon}</span>
            </div>
            <div className=''>  
-            <h3 className=' text-3xl text-zinc-800 font-bold'>{item.title}</h3>
-            <p className='text-zinc-600 '>{item.para}</p>
+            <h3 className='text-3xl text-zinc-800 font-bold'>{item.title}</h3>
+            <p className='text-zinc-600 mt-2'>{item.para}</p>
            </div>
         </div>
     )
@@ -35,14 +35,14 @@ const rightValues = value.slice(2, 4).map((item)=>{
     <section>
       <div className='max-w-[1300px] mx-auto px-10 py-20'>
           <Heading highlight='Our' content='Values'/>
-          <div className='flex items-center justify-between gap-5 mt-16 '>
+          <div className='flex items-center justify-between gap-15 md:gap-4 mt-16 flex-col md:flex-row'>
             {/* left values */}
-             <div className='min-h-100 flex flex-col justify-between'>
+             <div className=' gap-15 md:min-h-100 flex flex-col justify-between'>
                  {leftValues}
              </div>
-             <div  className='w-1/2'> <img src={Basket}/></div>
+             <div  className='hidden w-1/2 md:flex'> <img src={Basket}/></div>
              {/* right values */}
-             <div  className='min-h-100 flex flex-col justify-between'>
+             <div  className=' gap-15 md:min-h-100 flex flex-col justify-between'>
                   {rightValues}
              </div>
           </div>
