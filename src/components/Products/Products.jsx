@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Heading from '../Heading/Heading'
+import ProductList from "../ProductList/ProductList"
 
 const Products = () => {
 
@@ -29,6 +30,3 @@ const Products = () => {
 }
 
 export default Products
-
-
-const product = [{id:1, title:"Apple", price:"Fruits", imgSrc:"/products/apple.png"},];
