@@ -10,7 +10,7 @@ const Products = () => {
 
     const renderCards = ProductList.map(product =>{
         return(
-           <Cards />
+           <Cards image={product.image} name={product.name} price={product.price} />
         )
     })
     return (
@@ -31,7 +31,7 @@ const Products = () => {
                         )
                     })}
                 </div>
-                
+
                 {/* product cards */}
                 <div>{renderCards}</div>
             </div>

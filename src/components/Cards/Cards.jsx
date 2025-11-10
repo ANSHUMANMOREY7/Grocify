@@ -2,7 +2,8 @@ import React from 'react'
 import Button from "../Button/Button"
 import { FaHeart, FaPlus } from 'react-icons/fa'
 
-const Cards = () => {
+
+const Cards = ({ image , name , price}) => {
     return (
         <div>
             {/* card icons */}
@@ -13,15 +14,15 @@ const Cards = () => {
 
             {/* card image */}
             <div>
-                <img src=" " />
+                <img src={image}/>
             </div>
 
             {/* card content */}
 
             <div>
-                <h3>Title</h3>
-                <p>3.00</p>
-                <Button />
+                <h3>{name}</h3>
+                <p>{price}</p>
+                <Button content="Shop Now" />
             </div>
         </div>
     )
