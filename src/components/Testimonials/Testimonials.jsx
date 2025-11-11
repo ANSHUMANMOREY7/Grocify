@@ -10,39 +10,54 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import { FaStar } from 'react-icons/fa';
 
 const Testimonials = () => {
 
 
   return (
     <section>
-      <div className='max-w-[1300px] px-10 mx-auto py-20'>
+      <div className='max-w-[1300px] px-10 mx-auto'>
         <Heading highlight="Customers" content="Saying" />
         <div className='flex justify-end py-5 gap-x-3 '>
-          <button className='text-2xl text-zinc-800 rounded-lg  w-11 h-11 bg-zinc-300/50 flex justify-center items-center hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer'>
+          <button className='custom-prev text-2xl text-zinc-800 rounded-lg  w-11 h-11 bg-zinc-300/50 flex justify-center items-center hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer'>
             <IoIosArrowBack />
           </button>
-          <button className='text-2xl text-zinc-800 rounded-lg  w-11 h-11 bg-zinc-300/50 flex justify-center items-center hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer'>
+          <button className='custom-next text-2xl text-zinc-800 rounded-lg  w-11 h-11 bg-zinc-300/50 flex justify-center items-center hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer'>
             <IoIosArrowForward />
           </button>
         </div>
       </div>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper navigation={{
+        nextEl:".custom-next",
+        prevEl:".custom-prev"
+      }}
+      loop={true}
+      breakpoints={{
+        640:{slidesPerView:1 , spaceBetween:20},
+        768:{slidesPerView:2 , spaceBetween:20},
+        1024:{slidesPerView:3 , spaceBetween:20},
+      }}
+       modules={[Navigation]} className="mySwiper">
         {
           review.map(item => {
             return (
               
-                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-8 '>
-                  <div className='flex gap-5 items-center'>
+                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-5 mb-30 mx-4 '>
+                  <div className='flex gap-5 items-center '>
                     <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4'></div>
                     <div>
-                      <h5 className='text-xl font-bold'>Name</h5>
-                      <p className='text-zinc-600'>Profession</p>
-                      <span>Stars</span>
+                      <h5 className='text-xl font-bold'>{item.name}</h5>
+                      <p className='text-zinc-600'>{item.profession}</p>
+                      <span className='flex text-yellow-400 mt-3 text-xl gap-1'>
+                        {Array.from({length: item.rating}, (_, index) => (
+                          <FaStar key={index} />
+                        ))}
+                      </span>
                     </div>
                   </div>
-                  <div className='mt-10'>
-                    <p className='text-zinc-600'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, ipsam voluptas? Corrupti voluptatem at rerum impedit cum. Sed, eveniet recusandae.</p>
+                  <div className='mt-10 min-h-[15vh]'>
+                    <p className='text-zinc-600'>{item.para}</p>
                   </div>
                 </SwiperSlide>
               
@@ -88,7 +103,7 @@ const review = [
     id: 4,
     name: "Surya Maharana",
     profession: "Fitness Coach",
-    rating: 3,
+    rating:3,
     para: "I appreciate the selection of healthy foods and clean-label products. FreshBasket has been a great partner in my wellness journey!",
     image: Customer4,
   },
