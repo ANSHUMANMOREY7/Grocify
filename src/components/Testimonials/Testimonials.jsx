@@ -43,7 +43,7 @@ const Testimonials = () => {
           review.map(item => {
             return (
               
-                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-10 mb-30'>
+                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-10  mb-20'>
                   <div className='flex gap-5 items-center '>
                     <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4'></div>
                     <div>
@@ -56,8 +56,8 @@ const Testimonials = () => {
                       </span>
                     </div>
                   </div>
-                  <div className='mt-10 min-h-[15vh]'>
-                    <p className='text-zinc-600'>{item.para}</p>
+                  <div className='mt-5 h-[14vh]'>
+                    <p className='text-zinc-600 '>{item.para}</p>
                   </div>
                 </SwiperSlide>
               
