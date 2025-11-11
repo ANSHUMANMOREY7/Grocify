@@ -1,10 +1,13 @@
 import React from 'react'
+import Heading from '../Heading/Heading'
 
 const Testimonials = () => {
   return (
-    <div>
-      
+   <section>
+    <div className='max-w-[1300px] px-10 mx-auto'>
+       <Heading highlight="Customers" content="Saying"/>
     </div>
+   </section>
   )
 }
 
