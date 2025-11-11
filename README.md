@@ -36,7 +36,7 @@ project-root/
 ## 🧩 Setup Instructions
 
 ### 1️⃣ Clone the repository
-```bash
+
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
@@ -47,11 +47,16 @@ cd your-repo-name
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+
+git clone https://github.com/ANSHUMANMOREY7/Grocify.git
+cd Grocify
+
 2️⃣ Install dependencies
+
 npm install
+
 3️⃣ Run the development server
+
 npm run dev
 
 🏗️ Build for Production
