@@ -16,8 +16,8 @@ const Testimonials = () => {
 
 
   return (
-    <section>
-      <div className='max-w-[1300px] px-10 mx-auto'>
+    <section className='max-w-[1300px] px-10 mx-auto'>
+      <div className=''>
         <Heading highlight="Customers" content="Saying" />
         <div className='flex justify-end py-5 gap-x-3 '>
           <button className='custom-prev text-2xl text-zinc-800 rounded-lg  w-11 h-11 bg-zinc-300/50 flex justify-center items-center hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer'>
@@ -43,7 +43,7 @@ const Testimonials = () => {
           review.map(item => {
             return (
               
-                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-5 mb-30 mx-4 '>
+                <SwiperSlide className='bg-zinc-300/50 rounded-xl p-10 mb-30'>
                   <div className='flex gap-5 items-center '>
                     <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4'></div>
                     <div>
