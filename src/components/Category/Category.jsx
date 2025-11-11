@@ -19,7 +19,7 @@ const Category = () => {
         <div className='bg-zinc-200 pt-17 p-8 rounded-xl'>
           <h3 className='text-3xl font-bold text-zinc-800'>{cards.title}</h3>
           <p className='text-zinc-600 mt-3 mb-9'>{cards.description}</p>
-          <Button content="See All" />
+          <a href="/fruits"><Button content="See All" /></a>
         </div>
       </div>
     )
