@@ -52,9 +52,9 @@ const Footer = () => {
               Questions or Feedback? <br />
               We'd love to hear from you.
           </p>
-          <div >
-            <input type="email" name="email" id='email' autoComplete='off' placeholder='Email Address' />
-            <button>
+          <div className=' flex bg-white p-1  rounded-lg mt-6'>
+            <input type="email" name="email" id='email' autoComplete='off' placeholder='Email Address' className='h-[5vh] pl-4 flex-1 focus:outline-none' />
+            <button className='bg-gradient-to-b from-orange-400 to-orange-500 p-2 rounded-lg text-white text-2xl hover:to-orange-600 cursor-pointer'>
                 <IoIosArrowForward />
             </button>
           </div>
