@@ -9,14 +9,14 @@ const Process = () => {
     const RenderSteps = steps.map(items => {
         return (
             <div className='bg-zinc-300/50 rounded-lg p-5 flex-wrap max-w-[1300px] mx-auto py-10 '>
-                 <span className=' flex text-orange-500 w-18 text-7xl h-18 justify-center align-center rounded-full'>{items.number}</span>
-                 <div className='flex justify-center'>
+                <span className=' flex text-orange-500 w-18 text-7xl h-18 justify-center align-center rounded-full'>{items.number}</span>
+                <div className='flex justify-center'>
                     <span className='text-5xl  text-zinc-800 font-bold '>{items.icon}</span>
-                 </div>
-                 <div className='p-3 '>
-                    <h4 className='font-bold text-2xl text-zinc-800'>{items.title}</h4>  
+                </div>
+                <div className='p-3 '>
+                    <h4 className='font-bold text-2xl text-zinc-800'>{items.title}</h4>
                     <p className='font-semibold text-zinc-600'>{items.para}</p>
-                 </div>
+                </div>
             </div>
 
         )
@@ -27,7 +27,7 @@ const Process = () => {
                 <Heading highlight="Our" content="Process" />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9 mt-20 items-center'>
-               {RenderSteps}
+                {RenderSteps}
             </div>
         </div>
     )
