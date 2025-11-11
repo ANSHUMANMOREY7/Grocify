@@ -45,7 +45,10 @@ const Testimonials = () => {
               
                 <SwiperSlide className='bg-zinc-300/50 rounded-xl p-10  mb-20'>
                   <div className='flex gap-5 items-center '>
-                    <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4'></div>
+                    <div className='w-16 h-16 rounded-full bg-red-500 outline-2 outline-orange-500 outline-offset-4 overflow-hidden'>
+
+                      <img src={item.image}  className='w-full h-full '/>
+                    </div>
                     <div>
                       <h5 className='text-xl font-bold'>{item.name}</h5>
                       <p className='text-zinc-600'>{item.profession}</p>
@@ -56,7 +59,7 @@ const Testimonials = () => {
                       </span>
                     </div>
                   </div>
-                  <div className='mt-5 h-[14vh]'>
+                  <div className='mt-5 md:h-[14vh]'>
                     <p className='text-zinc-600 '>{item.para}</p>
                   </div>
                 </SwiperSlide>
@@ -77,7 +80,7 @@ export default Testimonials
 const review = [
   {
     id: 1,
-    name: "Ankit Yadav",
+    name: "Emma Stones",
     profession: "Food Blogger",
     rating: 3,
     para: "FreshBasket is my go-to store for all grocery needs. Their produce is always fresh, and the delivery is super fast. I love the user-friendly interface and variety of organic options!",
