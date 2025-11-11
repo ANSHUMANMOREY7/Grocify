@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className='bg-zinc-300/50 py-20 '>
-      <div className='max-w-[1300px] mx-auto px-10 flex flex-wrap'>
+      <div className='max-w-[1300px] mx-auto px-10 flex flex-wrap gap-y-12'>
         <div className='bg-zinc-200/50 flex-1 basis-[300px]'>
           <a href="#" className=' text-3xl font-bold'>
             Gr<span className='text-orange-500 uppercase'>o</span>cify
@@ -45,7 +45,7 @@ const Footer = () => {
             
         </ul>
 
-        <div>
+        <div className='flex-1'>
           <h5 className='text-zinc-800 text-2xl font-bold'>Stay Connected</h5>
 
           <p className='text-zinc-600 mt-6'>
