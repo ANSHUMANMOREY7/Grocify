@@ -20,7 +20,7 @@ const Category = () => {
         <div className='bg-zinc-200 pt-17 p-8 rounded-xl'>
           <h3 className='text-3xl font-bold text-zinc-800'>{cards.title}</h3>
           <p className='text-zinc-600 mt-3 mb-9'>{cards.description}</p>
-          < Link  to="/fruits" className='bg-gradient-to-b from-orange-400 to-orange-500 text-white px-8 py-3 rounded-lg md:text-lg text-md hover:scale-105 hover:to-orange-600 transition-all duration-300 mt-5 cursor-pointer'>
+          < Link  to={cards.path} className='bg-gradient-to-b from-orange-400 to-orange-500 text-white px-8 py-3 rounded-lg md:text-lg text-md hover:scale-105 hover:to-orange-600 transition-all duration-300 mt-5 cursor-pointer'>
           See All
            </Link>
         </div>
@@ -49,18 +49,21 @@ const category = [
     id: 1,
     title: 'Fruits  & Veggies',
     description: 'Fresh, organic produce sourced daily from local farms. Explore a wide range of seasonal fruits and crisp vegetables.',
-    image: FruitCat
+    image: FruitCat,
+    path:"/Fruits"
   },
   {
     id: 2,
     title: 'Dairy & Eggs',
     description: 'Wholesome dairy products and free-range eggs. From creamy milk and yogurt to artisanal cheeses.',
-    image: DairyCat
+    image: DairyCat,
+    path:"/Dairy"
   },
   {
     id: 3,
     title: 'Meat & SeaFood',
     description: 'High-quality, responsibly sourced meat and seafood. Choose from fresh cuts, marinated options, and more.',
-    image: SeaFoodCat
+    image: SeaFoodCat,
+    path:"/SeaFood"
   }
 ];
