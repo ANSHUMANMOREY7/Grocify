@@ -4,7 +4,7 @@ import CategoryPage from '../CategoryPage/CategoryPage'
 const Dairy = () => {
   return (
     <div>
-      <CategoryPage title="Dairy"/>
+      <CategoryPage title="Dairy" />
     </div>
   )
 }
