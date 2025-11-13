@@ -1,15 +1,19 @@
 import React from 'react'
 import Banner from '../Banner/Banner'
-import ProductList from "../../components/ProductList/ProductList"
+import productList from '../../components/ProductList/ProductList.js'
 import Cards from '../Cards/Cards'
 
 
-const CategoryPage = ({title , bgImage}) => {
-const RenderProduct = ProductList.map(product=>{
+const CategoryPage = ({ title, bgImage, categories = [] }) => {
+
+    // If no categories are passed, default to ['All'] so the page shows all products.
+    const filteredItems = categories.includes('All')
+        ? productList
+        : productList.filter(item => categories.includes(item.category))
+
+const RenderProduct = filteredItems.map(product=>{
     return(
-        <div key={product.id}>
-            <Cards image={product.image} name={product.name} price={product.price}/>
-        </div>
+        <Cards key={product.id} image={product.image} name={product.name} price={product.price}/>
     )
 })
 

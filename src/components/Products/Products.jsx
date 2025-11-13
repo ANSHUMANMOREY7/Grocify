@@ -4,6 +4,7 @@ import ProductList from "../ProductList/ProductList"
 import Cards from '../Cards/Cards'
 import { Link } from 'react-router-dom'
 
+
 const Products = () => {
 
     const categories = ["All", "Fruits", "Vegetables", "Dairy", "SeaFood"];

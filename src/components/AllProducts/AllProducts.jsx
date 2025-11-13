@@ -5,7 +5,7 @@ import BgAll from "../../assets/all-banner.jpg"
 const AllProducts = () => {
   return (
     <div>
-      <CategoryPage title="All Products" bgImage={BgAll}/>
+      <CategoryPage title="All Products" bgImage={BgAll} categories={'All'}/>
     </div>
   )
 }

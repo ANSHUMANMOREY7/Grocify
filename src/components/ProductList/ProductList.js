@@ -97,7 +97,7 @@ const products = [
     },
     {
         id: 11,
-        name: 'Beef',
+        name: 'Mutton',
         price: 8.0,
         category: 'Meat',
         image: Beef
