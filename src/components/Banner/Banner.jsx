@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Banner = () => {
+const Banner = ({title}) => {
   return (
     <div className='bg-zinc-400 h-[50vh] mt-23  flex justify-center items-center'>
-      <h2 className='text-5xl text-zinc-800 bg-white p-5 rounded-lg font-bold'>Banner</h2>
+      <h2 className='text-5xl text-zinc-800 bg-white p-5 rounded-lg font-bold'>{title}</h2>
     </div>
   )
 }
