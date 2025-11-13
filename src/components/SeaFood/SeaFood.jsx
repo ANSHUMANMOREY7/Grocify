@@ -1,10 +1,11 @@
 import React from 'react'
 import Banner from '../Banner/Banner'
+import CategoryPage from '../CategoryPage/CategoryPage'
 
 const SeaFood = () => {
   return (
     <div>
-      <Banner />
+      <CategoryPage />
     </div>
   )
 }
