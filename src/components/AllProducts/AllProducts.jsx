@@ -1,9 +1,10 @@
 import React from 'react'
+import CategoryPage from '../CategoryPage/CategoryPage'
 
 const AllProducts = () => {
   return (
     <div>
-      <h1>all products</h1>
+      <CategoryPage title="All Products"/>
     </div>
   )
 }

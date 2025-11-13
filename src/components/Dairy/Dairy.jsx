@@ -1,9 +1,10 @@
 import React from 'react'
+import CategoryPage from '../CategoryPage/CategoryPage'
 
 const Dairy = () => {
   return (
     <div>
-      <h1>i am dairy</h1>
+      <CategoryPage title="Dairy"/>
     </div>
   )
 }

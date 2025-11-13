@@ -5,7 +5,7 @@ import CategoryPage from '../CategoryPage/CategoryPage'
 const SeaFood = () => {
   return (
     <div>
-      <CategoryPage />
+      <CategoryPage title="  Meat & SeaFood" />
     </div>
   )
 }
