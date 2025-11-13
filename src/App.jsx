@@ -5,35 +5,43 @@ import Fruits from './components/Fruits/Fruits'
 import Dairy from './components/Dairy/Dairy'
 import SeaFood from './components/SeaFood/SeaFood'
 import AllProducts from './components/AllProducts/AllProducts'
+import Layout from '../src/components/Layout/Layout'
 const App = () => {
 
-const Router = createBrowserRouter ([
-  {
-    path : "/",
-    element:  <Home /> ,
+  const Router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path:"/",
+          element:<Home />
+        },
+        {
+          path: "/fruits",
+          element: <Fruits />,
+        },
+        {
+          path: "/Dairy",
+          element: <Dairy />,
+        },
+        {
+          path: "/SeaFood",
+          element: <SeaFood />,
+        },
+        {
+          path: "/allProducts",
+          element: <AllProducts />
+        }
 
-  },
-  {
-    path:"/fruits",
-    element: <Fruits />,
-  },
-  {
-    path:"/Dairy",
-    element: <Dairy />,
-  },
-  {
-    path:"/SeaFood",
-    element: <SeaFood />,
-  },
-  {
-    path:"/allProducts",
-    element:<AllProducts />
-  }
+      ]
 
-])
+    },
+
+  ])
 
   return (
-   <RouterProvider router={Router}/>
+    <RouterProvider router={Router} />
   )
 }
 
