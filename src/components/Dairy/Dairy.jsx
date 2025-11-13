@@ -5,7 +5,7 @@ import BgDairy from '../../assets/dairy-banner.jpg'
 const Dairy = () => {
   return (
     <div>
-      <CategoryPage title="Dairy" bgImage={BgDairy} categories={'Dairy'}/>
+      <CategoryPage title="Dairy & Eggs" bgImage={BgDairy} categories={'Dairy'}/>
     </div>
   )
 }
