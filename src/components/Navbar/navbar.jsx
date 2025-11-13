@@ -4,6 +4,7 @@ import { HiMiniShoppingBag } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { TbMenu2, TbMenu3 } from "react-icons/tb";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const navbar = () => {
@@ -16,9 +17,9 @@ const navbar = () => {
     <header className='bg-white fixed top-0 right-0 left-0 z-50 shadow-md'>
       <nav className=' max-w-[1300px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center '>
         {/* nav logo */}
-        <a href="#" className=' text-3xl font-bold'>
+        <Link to="/" className=' text-3xl font-bold'>
           Gr<span className='text-orange-500 uppercase'>o</span>cify
-        </a>
+        </Link>
         {/* menu */}
         <ul className='gap-x-12 md:flex hidden items-center '>
           <li>
