@@ -37,8 +37,8 @@ project-root/
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/ANSHUMANMOREY7/Grocify.git
+cd Grocify
 
 
 ---
